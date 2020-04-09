@@ -50,3 +50,10 @@ var_dump($result);
 - [Implemented VK API Methods](doc/01-api_method.md)
 - [Using helper](doc/02-using_helper.md)
 - [Examples](doc/03-examples.md)
+
+## Support Eslavon Digital Financially
+Get supported Eslavon Digital and help fund the project.
+
+**Yandex.Money:** 410016014512747
+
+**QIWI:** https://qiwi.com/n/ESLAVON
