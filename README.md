@@ -31,9 +31,22 @@ $result = $vk->users()->get("251510315");
 var_dump($result);
 
 /**
- * string(145) "{"response":[{"id":251510315,"first_name":"Виктор","last_name":"Виноградов","is_closed":false,"can_access_closed":true,"sex":2}]}" 
+ * { "response":
+ *  [{
+ *      "id":251510315,
+ *      "first_name":"Виктор",
+ *      "last_name":"Виноградов",
+ *      "is_closed":false,
+ *      "can_access_closed":true,
+ *      "sex":2
+ *  }]
+ * }
+ *  
  */
 ```
 
 
 ## Documentation
+- [Implemented VK API Methods](doc/01-api_method.md)
+- [Using helper](doc/02-using_helper.md)
+- [Examples](doc/03-examples.md)
