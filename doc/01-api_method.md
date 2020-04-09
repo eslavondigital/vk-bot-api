@@ -65,10 +65,22 @@ $vk->docs()->getWallUploadServer($group_id);
 *
 * @param string $file - parameter returned as a result of uploading the file to the server. Required.
 * @param string $title - document's name. Required.
-* @param string $tags - tags for search. Default 'eslavondigital'
+* @param string $tags - tags for search. Default: 'eslavondigital'
 * @return string
 */
 $vk->docs()->save($file, $title, $tags);
+
+
+/**
+* Returns search results for documents.
+*
+* @param string $q - search query string.Required.
+* @param bool $search_own - true: search among the user's own documents. Default: false
+* @param int $count - the number of documents whose information needs to be returned. Default: 20
+* @param int $offset - offset required to select a specific subset of documents. Default: 0
+* @return string
+*/
+$vk->docs()->search($q, $search_own, $count, $offset);
 ``` 
 ## Groups
 
