@@ -57,3 +57,11 @@ Get supported Eslavon Digital and help fund the project.
 **Yandex.Money:** 410016014512747
 
 **QIWI:** https://qiwi.com/n/ESLAVON
+
+### Author
+
+Vinogradov Victor - <eslavon.work.victor@gmail.com> - <https://vk.com/winogradow.wiktor><br />
+
+### License
+
+All Elavon Digital products are licensed under the MIT license - see the `LICENSE` file for details
