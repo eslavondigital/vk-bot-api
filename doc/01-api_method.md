@@ -54,10 +54,21 @@ $vk->docs()->getMessagesUploadServer($peer_id, $type);
 * Returns the server address for downloading documents to the Sent folder,
 * for subsequent sending the document to the wall or by personal message.
 *
-* @param int $group_id - ID of the community into which you want to upload the document.
+* @param int $group_id - ID of the community into which you want to upload the document. Required.
 * @return string
 */
 $vk->docs()->getWallUploadServer($group_id);
+
+
+/**
+* Saves the document after it is successfully uploaded to the server.
+*
+* @param string $file - parameter returned as a result of uploading the file to the server. Required.
+* @param string $title - document's name. Required.
+* @param string $tags - tags for search. Default 'eslavondigital'
+* @return string
+*/
+$vk->docs()->save($file, $title, $tags);
 ``` 
 ## Groups
 
