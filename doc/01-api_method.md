@@ -38,7 +38,18 @@ $vk->board()->restoreComment($group_id, $topic_id, $comment_id);
 | docs.getWallUploadServer     | Returns the server address for downloading documents to the Sent folder, for subsequent sending the document to the wall or by personal message. | https://vk.com/dev/docs.getWallUploadServer     |
 | docs.save                    | Saves the document after it is successfully uploaded to the server.                                                                              | https://vk.com/dev/docs.save                    |
 | docs.search                  | Returns search results for documents.                                                                                                            | https://vk.com/dev/docs.search                  |
+```php
+<?php
+/**
+* Gets the server address for downloading the document in a private message.
+*
+* @param int $peer_id - destination identifier, required
+* @param string $type - type of document. Default: 'doc'
+* @return string
+*/
+$vk->docs()->getMessagesUploadServer($peer_id, $type);
 
+``` 
 ## Groups
 
 ## Messages
