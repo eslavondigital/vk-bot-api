@@ -47,7 +47,7 @@ class Docs
      * Returns the server address for downloading documents to the Sent folder,
      * for subsequent sending the document to the wall or by personal message.
      *
-     * @param int $group_id - ID of the community into which you want to upload the document.
+     * @param int $group_id - ID of the community into which you want to upload the document. Required.
      * @return string
      */
     public function getWallUploadServer(int $group_id): string
@@ -61,9 +61,9 @@ class Docs
     /**
      * Saves the document after it is successfully uploaded to the server.
      *
-     * @param string $file
-     * @param string $title
-     * @param string $tags
+     * @param string $file - parameter returned as a result of uploading the file to the server. Required.
+     * @param string $title - document's name. Required.
+     * @param string $tags - tags for search. Default 'eslavondigital'
      * @return string
      */
     public function save(string $file, string $title, string $tags = 'eslavondigital'): string
