@@ -36,7 +36,7 @@ class Board
      * @param int $comment_id - ID of the comment in the discussion, required
      * @return string
      */
-    public function deleteComment(int $group_id, int $topic_id, int $comment_id)
+    public function deleteComment(int $group_id, int $topic_id, int $comment_id): string
     {
         $parameters = [
             'group_id' => $group_id,
@@ -54,7 +54,7 @@ class Board
      * @param int $comment_id - ID of the comment in the discussion, required
      * @return string
      */
-    public function restoreComment(int $group_id, int $topic_id, int $comment_id)
+    public function restoreComment(int $group_id, int $topic_id, int $comment_id): string
     {
         $parameters = [
             'group_id' => $group_id,
