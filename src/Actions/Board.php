@@ -15,6 +15,14 @@ class Board
         $this->request = $request;
     }
 
+    /**
+     * Deletes a topic post in community discussions.
+     *
+     * @param int $group_id - community identifier, required
+     * @param int $topic_id - discussion identifier, required
+     * @param int $comment_id - ID of the comment in the discussion, required
+     * @return string
+     */
     public function deleteComment(int $group_id, int $topic_id, int $comment_id)
     {
         $parameters = [
@@ -25,6 +33,14 @@ class Board
         return $this->request->post('board.deleteComment', $parameters);
     }
 
+    /**
+     * Recovers deleted topic message in group discussions.
+     *
+     * @param int $group_id - community identifier, required
+     * @param int $topic_id - discussion identifier, required
+     * @param int $comment_id - ID of the comment in the discussion, required
+     * @return string
+     */
     public function restoreComment(int $group_id, int $topic_id, int $comment_id)
     {
         $parameters = [
