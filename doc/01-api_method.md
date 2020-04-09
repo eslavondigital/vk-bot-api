@@ -49,6 +49,15 @@ $vk->board()->restoreComment($group_id, $topic_id, $comment_id);
 */
 $vk->docs()->getMessagesUploadServer($peer_id, $type);
 
+
+/**
+* Returns the server address for downloading documents to the Sent folder,
+* for subsequent sending the document to the wall or by personal message.
+*
+* @param int $group_id - ID of the community into which you want to upload the document.
+* @return string
+*/
+$vk->docs()->getWallUploadServer($group_id);
 ``` 
 ## Groups
 
