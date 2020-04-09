@@ -6,10 +6,23 @@ namespace Eslavon\VkBotApi\Actions;
 
 use Eslavon\VkBotApi\Request\VKApiRequest;
 
+/**
+ * Class Board
+ * @package Eslavon\VkBotApi\Actions
+ */
 class Board
 {
+    /**
+     * Object VkApiRequest
+     * @var VKApiRequest $request
+     */
+
     private VKApiRequest $request;
 
+    /**
+     * Board constructor.
+     * @param VKApiRequest $request - Object VkApiRequest.
+     */
     public function __construct(VkApiRequest $request)
     {
         $this->request = $request;
