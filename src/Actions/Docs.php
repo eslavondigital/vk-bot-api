@@ -79,10 +79,10 @@ class Docs
     /**
      * Returns search results for documents.
      *
-     * @param string $q
-     * @param bool $search_own
-     * @param int $count
-     * @param int $offset
+     * @param string $q - search query string.Required.
+     * @param bool $search_own - true: search among the user's own documents. Default: false
+     * @param int $count - the number of documents whose information needs to be returned. Default: 20
+     * @param int $offset - offset required to select a specific subset of documents. Default: 0
      * @return string
      */
     public function search( string $q, bool $search_own = false, int $count = 20, int $offset = 0): string
