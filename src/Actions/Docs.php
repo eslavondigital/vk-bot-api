@@ -47,7 +47,7 @@ class Docs
      * Returns the server address for downloading documents to the Sent folder,
      * for subsequent sending the document to the wall or by personal message.
      *
-     * @param int $group_id
+     * @param int $group_id - ID of the community into which you want to upload the document.
      * @return string
      */
     public function getWallUploadServer(int $group_id): string
