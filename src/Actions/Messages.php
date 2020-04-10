@@ -18,9 +18,9 @@ class Messages
     public function createChat(string $user_ids, string $title, int $group_id)
     {
         $parameters = [
-            "user_ids" => $user_ids,
-            "title" => $title,
-            "group_id" => $group_id
+            'user_ids' => $user_ids,
+            'title' => $title,
+            'group_id' => $group_id
         ];
         return $this->request->post('messages.createChat', $parameters);
     }
@@ -28,10 +28,10 @@ class Messages
     public function delete(string $message_ids, bool $spam, int $group_id, bool $delete_for_all = false)
     {
         $parameters = [
-            "message_ids" => $message_ids,
-            "spam" => $spam,
-            "group_id" => $group_id,
-            "delete_for_all" => $delete_for_all
+            'message_ids' => $message_ids,
+            'spam' => $spam,
+            'group_id' => $group_id,
+            'delete_for_all' => $delete_for_all
         ];
         return $this->request->post('messages.delete', $parameters);
     }
@@ -39,8 +39,8 @@ class Messages
     public function deleteChatPhoto(int $chat_id, int $group_id)
     {
         $parameters = [
-            "chat_id" => $chat_id,
-            "group_id" => $group_id,
+            'chat_id' => $chat_id,
+            'group_id' => $group_id,
         ];
         return $this->request->post('messages.deleteChatPhoto', $parameters);
     }
@@ -48,8 +48,8 @@ class Messages
     public function editChat(int $chat_id, string $title)
     {
         $parameters = [
-            "chat_id" => $chat_id,
-            "title" => $title,
+            'chat_id' => $chat_id,
+            'title' => $title,
         ];
         return $this->request->post('messages.editChat', $parameters);
     }
