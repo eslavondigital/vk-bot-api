@@ -83,9 +83,36 @@ $vk->docs()->save($file, $title, $tags);
 $vk->docs()->search($q, $search_own, $count, $offset);
 ``` 
 ## Groups
-
+| API Method name                    | Description                                                                               | Documentation                                         |
+|------------------------------------|-------------------------------------------------------------------------------------------|-------------------------------------------------------|
+| groups.addCallbackServer           | Adds a server for the Callback API to the community.                                      | https://vk.com/dev/groups.addCallbackServer           |
+| groups.deleteCallbackServer        | Removes the server for the Callback API from the community.                               | https://vk.com/dev/groups.deleteCallbackServer        |
+| groups.editCallbackServer          | Edits server data for the Callback API in the community.                                  | https://vk.com/dev/groups.editCallbackServer          |
+| groups.enableOnline                | Includes online status in the community.                                                  | https://vk.com/dev/groups.enableOnline                |
+| groups.disableOnline               | Turns off online status in the community.                                                 | https://vk.com/dev/groups.disableOnline               |
+| groups.getOnlineStatus             | Gets information about the status of "online" in the community.                           | https://vk.com/dev/groups.getOnlineStatus             |
+| groups.getCallbackConfirmationCode | Allows you to get the string necessary to confirm the server address in the Callback API. | https://vk.com/dev/groups.getCallbackConfirmationCode |
+| groups.getCallbackServers          | Gets server information for the Callback API in the community.                            | https://vk.com/dev/groups.getCallbackServers          |
+| groups.getCallbackSettings         | Lets you get the Callback API notification settings for the community.                    | https://vk.com/dev/groups.getCallbackSettings         |
+| groups.setCallbackSettings         | Allows you to configure event notification settings in the Callback API.                  | https://vk.com/dev/groups.setCallbackSettings         |
+| groups.getMembers                  | Gets a list of community members.                                                         | https://vk.com/dev/groups.getMembers                  |
+| groups.isMember                    | Gets information about whether the user is a member of the community.                     | https://vk.com/dev/groups.isMember                    |
+| groups.getBanned                   | Returns a list of banned users and communities in a community.                            | https://vk.com/dev/groups.getBanned                   |
+| groups.getTokenPermissions         | Returns privilege settings for a community access key.                                    | https://vk.com/dev/groups.getTokenPermissions         |
 ## Messages
-
+| API Method name          | Description                                       | Documentation                               |
+|--------------------------|---------------------------------------------------|---------------------------------------------|
+| messages.createChat      | Creates a conversation with several participants. | https://vk.com/dev/messages.createChat      |
+| messages.delete          | Deletes the message.                              | https://vk.com/dev/messages.delete          |
+| messages.deleteChatPhoto | Allows you to delete a multi-dialog photo.        | https://vk.com/dev/messages.deleteChatPhoto |
+| messages.editChat        | Changes the name of the conversation.             | https://vk.com/dev/messages.editChat        |
+| messages.send            | Sends a message.                                  | https://vk.com/dev/messages.send            |
 ## Photos
-
+| API Method name                | Description                                                                                               | Documentation                                     |
+|--------------------------------|-----------------------------------------------------------------------------------------------------------|---------------------------------------------------|
+| photos.getMessagesUploadServer | Returns the server address for uploading the photo to a private message.                                  | https://vk.com/dev/photos.getMessagesUploadServer |
+| photos.saveMessagesPhoto       | Saves the photo after successful upload to the URI obtained by the photos.getMessagesUploadServer method. | https://vk.com/dev/photos.saveMessagesPhoto       |
 ## Users
+| API Method name | Description                        | Documentation                |
+|-----------------|------------------------------------|------------------------------|
+| users.get       | Returns advanced user information. | https://vk.com/dev/users.get |
