@@ -18,10 +18,10 @@ class Groups
     public function addCallbackServer(int $group_id, string $url, string $title, string $secret_key)
     {
         $parameters = [
-            "group_id" => $group_id,
-            "url" => $url,
-            "title" => $title,
-            "secret_key" => $secret_key
+            'group_id' => $group_id,
+            'url' => $url,
+            'title' => $title,
+            'secret_key' => $secret_key
         ];
         return $this->request->post('groups.addCallbackServer', $parameters);
     }
@@ -29,8 +29,8 @@ class Groups
     public function deleteCallbackServer(int $group_id, int $server_id)
     {
         $parameters = [
-            "group_id" => $group_id,
-            "server_id" => $server_id
+            'group_id' => $group_id,
+            'server_id' => $server_id
         ];
         return $this->request->post('groups.deleteCallbackServer', $parameters);
     }
@@ -38,11 +38,11 @@ class Groups
     public function editCallbackServer(int $group_id, int $server_id,string $url, string $title, string $secret_key)
     {
         $parameters = [
-            "group_id" => $group_id,
-            "server_id" => $server_id,
-            "url" => $url,
-            "title" => $title,
-            "secret_key" => $secret_key
+            'group_id' => $group_id,
+            'server_id' => $server_id,
+            'url' => $url,
+            'title' => $title,
+            'secret_key' => $secret_key
         ];
         return $this->request->post('groups.editCallbackServer', $parameters);
     }
@@ -50,7 +50,7 @@ class Groups
     public function enableOnline(int $group_id)
     {
         $parameters = [
-            "group_id" => $group_id
+            'group_id' => $group_id
         ];
         return $this->request->post('groups.enableOnline', $parameters);
     }
@@ -58,7 +58,7 @@ class Groups
     public function disableOnline(int $group_id)
     {
         $parameters = [
-            "group_id" => $group_id
+            'group_id' => $group_id
         ];
         return $this->request->post('groups.disableOnline', $parameters);
     }
@@ -66,7 +66,7 @@ class Groups
     public function getOnlineStatus(int $group_id)
     {
         $parameters = [
-            "group_id" => $group_id
+            'group_id' => $group_id
         ];
         return $this->request->post('groups.getOnlineStatus', $parameters);
     }
@@ -74,7 +74,7 @@ class Groups
     public function getCallbackConfirmationCode(int $group_id)
     {
         $parameters = [
-            "group_id" => $group_id
+            'group_id' => $group_id
         ];
         return $this->request->post('groups.getCallbackConfirmationCode', $parameters);
     }
@@ -82,7 +82,7 @@ class Groups
     public function getCallbackServers(int $group_id)
     {
         $parameters = [
-            "group_id" => $group_id
+            'group_id' => $group_id
         ];
         return $this->request->post('groups.getCallbackServers', $parameters);
     }
@@ -90,8 +90,8 @@ class Groups
     public function getCallbackSettings(int $group_id, int $server_id)
     {
         $parameters = [
-            "group_id" => $group_id,
-            "server_id" => $server_id
+            'group_id' => $group_id,
+            'server_id' => $server_id
         ];
         return $this->request->post('groups.getCallbackSettings', $parameters);
     }
@@ -99,9 +99,9 @@ class Groups
     public function setCallbackSettings(int $group_id, int $server_id, array $flags, string $api_version = '5.103')
     {
         $parameters = [
-            "group_id" => $group_id,
-            "server_id" => $server_id,
-            "api_version" => $api_version
+            'group_id' => $group_id,
+            'server_id' => $server_id,
+            'api_version' => $api_version
         ];
         $parameters = $parameters+$flags;
         return $this->request->post('groups.setCallbackSettings', $parameters);
@@ -110,10 +110,10 @@ class Groups
     public function getMembers(int $group_id, string $sort = 'id_asc', int $offset = 0, int $count = 1000)
     {
         $parameters = [
-            "group_id" => $group_id,
-            "sort" => $sort,
-            "offset" => 0,
-            "count" => $count
+            'group_id' => $group_id,
+            'sort' => $sort,
+            'offset' => 0,
+            'count' => $count
         ];
         return $this->request->post('groups.getMembers', $parameters);
     }
@@ -121,9 +121,9 @@ class Groups
     public function isMember(int $group_id, int $user_id, bool $extended = false)
     {
         $parameters = [
-            "group_id" => $group_id,
-            "user_id" => $user_id,
-            "extended" => $extended
+            'group_id' => $group_id,
+            'user_id' => $user_id,
+            'extended' => $extended
         ];
         return $this->request->post('groups.isMember', $parameters);
     }
@@ -131,9 +131,9 @@ class Groups
     public function getBanned(int $group_id, int $offset = 0, int $count = 20)
     {
         $parameters = [
-            "group_id" => $group_id,
-            "offset" => $offset,
-            "count" => $count
+            'group_id' => $group_id,
+            'offset' => $offset,
+            'count' => $count
         ];
         return $this->request->post('groups.getBanned', $parameters);
     }
