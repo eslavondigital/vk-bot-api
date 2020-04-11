@@ -26,7 +26,7 @@ class Install
            $result_add = json_decode($result_add);
            $server_id = $result_add->response->server_id;
            $this->groups->setCallbackSettings($group_id,  $server_id, ["message_new" => true], '5.103');
-           $this->groups->setSetting($group_id, true, true, false,false);
+           return $this->groups->setSettings($group_id, true, true, false,false);
         }
 
     }
