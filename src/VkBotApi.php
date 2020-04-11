@@ -10,6 +10,7 @@ use Eslavon\VkBotApi\Actions\Groups;
 use Eslavon\VkBotApi\Actions\Messages;
 use Eslavon\VkBotApi\Actions\Photos;
 use Eslavon\VkBotApi\Actions\Users;
+use Eslavon\VkBotApi\Callback\CallbackApi;
 use Eslavon\VkBotApi\Helper\Helper;
 use Eslavon\VkBotApi\Request\VKApiRequest;
 
@@ -32,6 +33,8 @@ class VkBotApi
     protected Photos $photos;
 
     protected Helper $helper;
+
+    protected CallbackApi $callback;
 
 
 
@@ -108,6 +111,13 @@ class VkBotApi
         return $this->helper;
     }
 
+    public function callback(): CallbackApi
+    {
+        if (isset($this->callback) === false) {
+            $this->callback = new CallbackApi();
+        }
+        return $this->callback;
+    }
 
 
 
