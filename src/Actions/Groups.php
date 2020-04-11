@@ -112,7 +112,7 @@ class Groups
         $parameters = [
             'group_id' => $group_id,
             'sort' => $sort,
-            'offset' => 0,
+            'offset' => $offset,
             'count' => $count
         ];
         return $this->request->post('groups.getMembers', $parameters);
@@ -141,5 +141,17 @@ class Groups
     public function getTokenPermissions()
     {
         return $this->request->post('groups.getTokenPermissions', []);
+    }
+
+    public function setSetting(int $group_id, bool $messages, bool $bots_capabilities, bool $bots_start_button, bool $bots_add_to_chat)
+    {
+        $parameters = [
+            'group_id' => $group_id,
+            'messages' => $messages,
+            'bots_capabilities' => $bots_capabilities,
+            'bots_start_button' => $bots_start_button,
+            'bots_add_to_chat' => $bots_add_to_chat
+        ];
+        return $this->request->post('groups.setSetting', $parameters);
     }
 }
