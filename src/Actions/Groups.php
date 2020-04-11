@@ -143,7 +143,7 @@ class Groups
         return $this->request->post('groups.getTokenPermissions', []);
     }
 
-    public function setSetting(int $group_id, bool $messages, bool $bots_capabilities, bool $bots_start_button, bool $bots_add_to_chat)
+    public function setSettings(int $group_id, bool $messages, bool $bots_capabilities, bool $bots_start_button, bool $bots_add_to_chat)
     {
         $parameters = [
             'group_id' => $group_id,
@@ -152,6 +152,6 @@ class Groups
             'bots_start_button' => $bots_start_button,
             'bots_add_to_chat' => $bots_add_to_chat
         ];
-        return $this->request->post('groups.setSetting', $parameters);
+        return $this->request->post('groups.setSettings', $parameters);
     }
 }
