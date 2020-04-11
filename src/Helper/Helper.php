@@ -14,6 +14,8 @@ class Helper
 
     private Loader $loader;
 
+    private Install $install;
+
     public function __construct(VKApiRequest $request)
     {
         $this->request = $request;
@@ -33,6 +35,14 @@ class Helper
             $this->loader = new Loader($this->request);
         }
         return $this->loader;
+    }
+
+    public function install()
+    {
+        if (isset($this->install) === false) {
+            $this->install = new Install($this->request);
+        }
+        return $this->install;
     }
 
 }
