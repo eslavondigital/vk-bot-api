@@ -70,7 +70,7 @@ class CallbackApi
         $this->event_type = $data->type;
         $this->group_id = $data->group_id;
         $this->event_id = (isset($data->event_id))? $data->event_id: "";
-        $this->secret_key = $data->secret;
+        $this->secret_key = (isset($data->secret))? $data->secret: "";
         switch ($data->type) {
             case 'message_new';
             case 'message_reply';
