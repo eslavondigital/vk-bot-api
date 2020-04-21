@@ -80,6 +80,10 @@ class CallbackApi
             case 'message_typing_state';
                 return new Messages($json);
                 break;
+            case 'group_join';
+            case 'group_leave';
+                return new Join($json);
+                break;
 
         }
     }
